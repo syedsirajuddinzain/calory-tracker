@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-container">
+    <div class="card">
+      <h1>🔥 Calorie Tracker</h1>
+
+      <section id="auth-section">
+        <h2>Welcome Back!</h2>
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="password" id="password" placeholder="Your Password">
+        <button id="signup">Sign Up</button>
+        <button id="login">Log In</button>
+        <button id="logout">Log Out</button>
+      </section>
+
+      <section id="app" class="hidden">
+        <h2>Add Food Item</h2>
+        <input type="text" id="food" placeholder="Enter food (e.g., banana)">
+        <button id="addFood">Add Food</button>
+
+        <h3>Your Today’s Intake 🥗</h3>
+        <ul id="foodList"></ul>
+
+        <!-- Daily Calorie Goal Section -->
+        <div class="goal-section">
+          <h2>Daily Goal</h2>
+          <input type="number" id="calorieGoal" placeholder="Set daily calorie goal">
+          <button id="saveGoal">Save Goal</button>
+          <p class="progress-text">
+            Progress: <span id="calorieProgress">0</span> / <span id="goalValue">0</span> calories
+          </p>
+          <progress id="goalProgressBar" value="0" max="100"></progress>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="app.js" defer></script>
+</body>
+</html>
